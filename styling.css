@@ -10,6 +10,10 @@ body {
     color: white;
 }
 
+body {
+    background: linear-gradient(135deg, #081B3A 0%, #004d79 100%);
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
