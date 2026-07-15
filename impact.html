@@ -8,24 +8,147 @@
     <link rel="stylesheet" href="styling.css">
 </head>
 
-<body>
+<body class="impact-page">
     <header>
         <nav class="navbar">
-
-
-
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="mission.html">Mission</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
-
             <a href="#" class="btn">Download</a>
-
         </nav>
     </header>
 
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-box" id="popupBox">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h3 id="popupName">Name</h3>
+            <p id="popupStory"></p>
+            <p><strong>Skills:</strong> <span id="popupSkills"></span></p>
+            <p><strong>Job:</strong> <span id="popupJob"></span></p>
+            <p><strong>Company:</strong> <span id="popupCompany"></span></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Our Impact</h1>
+            <p>We are a job matching platform that connects job seekers with employers in a faster and smarter way. Our
+                mission is to help graduates find the right opportunities and help employers discover the right talent.
+            </p>
+            <p>So far, we have helped match over <strong>70%</strong> of graduates with suitable employers within
+                <strong>3 months</strong> after graduation.
+            </p>
+        </div>
+
+        <div class="stats">
+            <div class="card">
+                <h3>70%+ Matches</h3>
+                <p>More than 70% of graduates are successfully matched with employers.</p>
+            </div>
+            <div class="card">
+                <h3>3 Months</h3>
+                <p>Most graduates are placed within three months of finishing school.</p>
+            </div>
+            <div class="card">
+                <h3>500+ Employers</h3>
+                <p>We continue to grow our employer network across different industries.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>What we have achieved</h2>
+            <ul>
+                <li>Connected thousands of job seekers with employers</li>
+                <li>Created a simple and trusted job matching experience</li>
+                <li>Supported graduates with career opportunities faster</li>
+                <li>Built strong partnerships with companies and hiring teams</li>
+            </ul>
+        </div>
+
+        <div class="story-section">
+            <h2>Success Stories</h2>
+            <div class="story-track">
+                <div class="story-card"
+                    onclick="openPopup('Alice', 'I found a marketing role within weeks thanks to this platform.', 'Marketing, Communication, Content Strategy', 'Marketing Coordinator', 'BrightWave Ltd')">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>Alice, Graduate</strong>
+                        <p>“I found a marketing role within weeks thanks to this platform.”</p>
+                    </div>
+                </div>
+                <div class="story-card"
+                    onclick="openPopup('Daniel', 'The matching system helped me connect with the right employer quickly.', 'JavaScript, React, Problem Solving', 'Software Engineer', 'CodeHub Technologies')">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>Daniel, Software Engineer</strong>
+                        <p>“The matching system helped me connect with the right employer quickly.”</p>
+                    </div>
+                </div>
+                <div class="story-card"
+                    onclick="openPopup('Mina', 'I got matched with a great company just three months after graduation.', 'Data Analysis, Excel, Reporting', 'Business Analyst', 'Northstar Consulting')">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>Mina, Business Analyst</strong>
+                        <p>“I got matched with a great company just three months after graduation.”</p>
+                    </div>
+                </div>
+                <div class="story-card"
+                    onclick="openPopup('Chris', 'The platform made my job search feel simple and confident.', 'UI Design, Figma, Branding', 'Product Designer', 'Pixel Studio')">
+                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>Chris, Designer</strong>
+                        <p>“The platform made my job search feel simple and confident.”</p>
+                    </div>
+                </div>
+                <div class="story-card"
+                    onclick="openPopup('Sarah', 'I was connected with employers that truly matched my skills.', 'Leadership, Planning, Coordination', 'Project Manager', 'GreenBridge Group')">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>Sarah, Project Manager</strong>
+                        <p>“I was connected with employers that truly matched my skills.”</p>
+                    </div>
+                </div>
+                <div class="story-card"
+                    onclick="openPopup('James', 'The experience was smooth, fast, and very encouraging.', 'Python, SQL, Data Insights', 'Data Analyst', 'Insight Labs')">
+                    <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=200&q=80"
+                        alt="Graduate story">
+                    <div>
+                        <strong>James, Data Analyst</strong>
+                        <p>“The experience was smooth, fast, and very encouraging.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup(name, story, skills, job, company) {
+            document.getElementById('popupName').textContent = name;
+            document.getElementById('popupStory').textContent = story;
+            document.getElementById('popupSkills').textContent = skills;
+            document.getElementById('popupJob').textContent = job;
+            document.getElementById('popupCompany').textContent = company;
+            document.getElementById('popupOverlay').classList.add('active');
+        }
+
+        function closePopup() {
+            document.getElementById('popupOverlay').classList.remove('active');
+        }
+
+        document.getElementById('popupOverlay').addEventListener('click', function (event) {
+            if (event.target === this) {
+                closePopup();
+            }
+        });
+    </script>
 </body>
 
 </html>
