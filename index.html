@@ -4,93 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skill <Hub:Lumina></Hub:Lumina>
-    </title>
-
-    <!-- CSS File -->
+    <title>Lumina | Skill Match</title>
     <link rel="stylesheet" href="styling.css">
-    <style>
-        img {
-            border-radius: 100px;
-            float: left;
-            margin-right: 20px;
-            object-fit: cover;
-        }
-    </style>
-
-
 </head>
 
 <body>
-
-    <!-- Navigation Bar -->
     <header>
-        <img src="logo.jpg" alt="company logo" width="150" height="150">
+        <img src="logo.jpg" alt="Lumina company logo" width="150" height="150">
         <nav class="navbar">
-
-            <div class="logo">
-                Lumina
-            </div>
-
+            <div class="logo">Lumina</div>
             <ul class="nav-links">
                 <li><a href="about.html">About</a></li>
                 <li><a href="mission.html">Mission</a></li>
                 <li><a href="impact.html">Impact</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-
             <a href="#" class="btn">Download</a>
-
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
-
         <div class="hero-text">
-
-            <h1>
-                Find Jobs <br>
-                Faster Than Ever
-            </h1>
-
-            <p>
-                Discover opportunities, connect with employers and
-                build your future with one powerful platform.
-            </p>
+            <span class="eyebrow">AI-powered career discovery</span>
+            <h1>Find Jobs <br> Faster Than Ever</h1>
+            <p>Discover opportunities, connect with employers, and build your future with a platform that understands your strengths in real time.</p>
 
             <div class="hero-buttons">
                 <a href="#" class="btn">Get Started</a>
                 <a href="#" class="btn-secondary">Learn More</a>
             </div>
 
+            <div class="hero-highlights">
+                <div>
+                    <strong>24/7</strong>
+                    <span>Smart matching</span>
+                </div>
+                <div>
+                    <strong>98%</strong>
+                    <span>Skill fit accuracy</span>
+                </div>
+                <div>
+                    <strong>1.2k+</strong>
+                    <span>Active employers</span>
+                </div>
+            </div>
         </div>
 
+        <div class="hero-card">
+            <div class="chat-shell">
+                <div class="chat-header">
+                    <div class="chat-title-group">
+                        <div class="chat-avatar">AI</div>
+                        <div>
+                            <h3>Skill Match Assistant</h3>
+                            <p>Live suggestions • 3 new matches</p>
+                        </div>
+                    </div>
+                    <span class="status-dot">Online</span>
+                </div>
 
+                <div class="chat-body">
+                    <div class="bubble bubble-bot">I found 3 roles that fit your frontend and UX strengths.</div>
+                    <div class="bubble bubble-user">Show me the most senior opportunities.</div>
+                    <div class="bubble bubble-bot">Absolutely — here are the top matches with salary insights and remote flexibility.</div>
+                </div>
 
+                <div class="chat-input">
+                    <input type="text" value="Find roles for product design" aria-label="Chat prompt">
+                    <button>Send</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features">
-        <h2>Features</h2>
+    <section class="features-section" id="features">
+        <div class="section-intro">
+            <span class="eyebrow">Advanced features</span>
+            <h2>Built for modern career growth</h2>
+            <p>From intelligent networking to personalized recommendations, Lumina brings your next opportunity closer.</p>
+        </div>
+
+        <div class="feature-grid">
+            <article class="feature-card">
+                <h3>AI Skill Matching</h3>
+                <p>Get instant job recommendations based on your experience, growth goals, and preferred industries.</p>
+            </article>
+            <article class="feature-card">
+                <h3>CV Tailoring</h3>
+                <p>Adapt your resume automatically for each role by highlighting the most relevant achievements, tools, and keywords.</p>
+            </article>
+            <article class="feature-card">
+                <h3>Smart Networking</h3>
+                <p>Connect with employers and mentors through tailored introductions that feel personal and timely.</p>
+            </article>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
+    <section class="cv-showcase">
+        <div class="cv-panel">
+            <div class="cv-panel-text">
+                <span class="eyebrow">Tailored for every role</span>
+                <h2>Let AI reshape your CV for the exact job you want</h2>
+                <p>Upload your current resume, choose the role, and let Lumina suggest stronger summaries, better keywords, and role-specific achievements.</p>
+                <ul>
+                    <li>Match your experience to job descriptions</li>
+                    <li>Rephrase bullet points for impact and clarity</li>
+                    <li>Recommend the best skills and certifications to add</li>
+                </ul>
+            </div>
+            <div class="cv-panel-card">
+                <div class="job-form">
+                    <label for="job-title">Target role</label>
+                    <input type="text" id="job-title" placeholder="e.g. Senior Product Designer">
+                    <label for="industry">Industry</label>
+                    <input type="text" id="industry" placeholder="e.g. Fintech">
+                    <button>Generate CV Match</button>
+                </div>
+                <div class="preview-card">
+                    <h4>AI Preview</h4>
+                    <p><strong>Suggested headline:</strong> Product Designer with 6+ years crafting intuitive digital experiences.</p>
+                    <p><strong>Recommended focus:</strong> UX strategy, systems thinking, and measurable impact.</p>
+                    <div class="suggestion-stack">
+                        <div class="suggestion-pill">AI summary improved</div>
+                        <div class="suggestion-pill">Keywords optimized</div>
+                        <div class="suggestion-pill">Achievements highlighted</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Gallery</h2>
+    <section class="login-section">
+        <div class="section-intro">
+            <span class="eyebrow">Access your account</span>
+            <h2>Log in as an employer or an employee</h2>
+            <p>Choose the experience that fits your goals and start matching smarter today.</p>
+        </div>
+
+        <div class="login-grid">
+            <div class="login-card">
+                <h3>For Employers</h3>
+                <p>Post roles, discover qualified talent, and connect with candidates faster.</p>
+                <a href="#" class="btn">Employer Login</a>
+            </div>
+            <div class="login-card">
+                <h3>For Employees</h3>
+                <p>Tailor your CV, explore opportunities, and receive smart career recommendations.</p>
+                <a href="#" class="btn-secondary">Employee Login</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
+    <section class="insight-strip">
+        <div>
+            <strong>10k+</strong>
+            <span>career conversations</span>
+        </div>
+        <div>
+            <strong>4.9/5</strong>
+            <span>user satisfaction</span>
+        </div>
+        <div>
+            <strong>85%</strong>
+            <span>faster shortlisting</span>
+        </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Lumina. All rights reserved.</p>
     </footer>
+</body>
+
+</html>
